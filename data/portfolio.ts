@@ -33,7 +33,7 @@ export const portfolioContent: PortfolioContent = {
     bio: "Backend engineer. 2+ years turning complex business problems into clean, scalable software — with a focus on fintech and entrepreneurship across Africa.",
     primaryCta: { label: "See my work", href: "#projects" },
     secondaryCta: { label: "Let's talk", href: "#contact" },
-    cvCta: { label: "View CV", href: "/cv.pdf" },
+    cvCta: { label: "View CV", href: "https://docs.google.com/document/d/1XcksqJV9JMAebF2AVMk6kRVhKT22Dvx0iDEzoapqUCs/edit?usp=sharing" },
   },
   skills: [
     {
