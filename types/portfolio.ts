@@ -1,3 +1,5 @@
+import type { StaticImageData } from "next/image";
+
 export type LinkItem = {
   label: string;
   href: string;
@@ -22,6 +24,9 @@ export type ProjectItem = {
   desc: string;
   stack: string[];
   type: ProjectType;
+  href?: string;
+  imageSrc?: string | StaticImageData;
+  imageAlt?: string;
 };
 
 export type HeroContent = {
@@ -31,6 +36,7 @@ export type HeroContent = {
   bio: string;
   primaryCta: LinkItem;
   secondaryCta: LinkItem;
+  cvCta: LinkItem;
 };
 
 export type SectionIntro = {

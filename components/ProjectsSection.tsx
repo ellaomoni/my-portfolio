@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import type { ProjectItem, SectionIntro } from "@/types/portfolio";
+import { PortfolioIcon } from "@/components/PortfolioIcon";
 import { SectionHeading } from "@/components/SectionHeading";
 
 type ProjectsSectionProps = {
@@ -9,14 +11,13 @@ type ProjectsSectionProps = {
   projects: ProjectItem[];
 };
 
-const filters = ["All", "Client", "Personal"] as const;
+const filters = ["Client", "Personal"] as const;
 type Filter = (typeof filters)[number];
 
 export function ProjectsSection({ intro, projects }: ProjectsSectionProps) {
-  const [filter, setFilter] = useState<Filter>("All");
+  const [filter, setFilter] = useState<Filter>("Client");
 
-  const filtered =
-    filter === "All" ? projects : projects.filter((p) => p.type === filter);
+  const filtered = projects.filter((p) => p.type === filter);
 
   return (
     <section id="projects" className="px-[5%] py-[100px]">
@@ -45,8 +46,19 @@ export function ProjectsSection({ intro, projects }: ProjectsSectionProps) {
           {filtered.map((project) => (
             <article
               key={project.headline}
-              className="group grid items-center gap-10 rounded-2xl border border-[var(--border)] bg-[rgba(255,255,255,0.02)] p-10 transition-[border-color,background] hover:border-[rgba(124,92,252,0.3)] hover:bg-[rgba(124,92,252,0.04)] lg:grid-cols-2"
+              className="group relative grid items-center gap-10 rounded-2xl border border-[var(--border)] bg-[rgba(255,255,255,0.02)] p-10 transition-[border-color,background] hover:border-[rgba(124,92,252,0.3)] hover:bg-[rgba(124,92,252,0.04)] lg:grid-cols-2"
             >
+              {project.type === "Personal" && project.href ? (
+                <a
+                  href={project.href}
+                  target={project.href.startsWith("http") ? "_blank" : undefined}
+                  rel={project.href.startsWith("http") ? "noreferrer noopener" : undefined}
+                  aria-label={`Open ${project.tag} project`}
+                  className="absolute right-4 top-4 inline-flex shrink-0 p-2 text-[var(--accent)] transition-colors]"
+                >
+                  <PortfolioIcon icon="mdi:arrow-top-right" size={18} />
+                </a>
+              ) : null}
               <div>
                 <span className="mb-4 block text-[11px] font-bold tracking-[0.08em] text-[var(--accent)]">
                   {project.tag.toUpperCase()}
@@ -66,11 +78,21 @@ export function ProjectsSection({ intro, projects }: ProjectsSectionProps) {
                   ))}
                 </div>
               </div>
-              <div
-                aria-hidden
-                className="flex aspect-[4/3] items-center justify-center rounded-xl border border-[rgba(124,92,252,0.2)] bg-[linear-gradient(135deg,rgba(124,92,252,0.2)_0%,rgba(124,92,252,0.05)_100%)]"
-              >
-                <span className="text-5xl opacity-30">⌨</span>
+              <div className="overflow-hidden rounded-xl border border-[rgba(124,92,252,0.2)] bg-[linear-gradient(135deg,rgba(124,92,252,0.2)_0%,rgba(124,92,252,0.05)_100%)]">
+                {project.imageSrc ? (
+                  <Image
+                    src={project.imageSrc}
+                    alt={project.imageAlt ?? `${project.tag} project preview`}
+                    width={1200}
+                    height={900}
+                    className="h-auto w-full object-contain"
+                    sizes="(min-width: 1024px) 420px, 100vw"
+                  />
+                ) : (
+                  <div aria-hidden className="flex min-h-[260px] items-center justify-center">
+                    <span className="text-5xl opacity-30">⌨</span>
+                  </div>
+                )}
               </div>
             </article>
           ))}

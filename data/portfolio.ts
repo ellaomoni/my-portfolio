@@ -1,4 +1,8 @@
 import type { PortfolioContent } from "@/types/portfolio";
+import AigbogunImage from "@/assets/Images/Aigbogun.png";
+import DryklinImage from "@/assets/Images/Artisian Active bookings.png";
+import SolvaImage from "@/assets/Images/Solva.png";
+import WasteFlipImage from "@/assets/Images/WasteFlip.png";
 
 export const portfolioContent: PortfolioContent = {
   siteConfig: {
@@ -29,6 +33,7 @@ export const portfolioContent: PortfolioContent = {
     bio: "Backend engineer. 2+ years turning complex business problems into clean, scalable software — with a focus on fintech and entrepreneurship across Africa.",
     primaryCta: { label: "See my work", href: "#projects" },
     secondaryCta: { label: "Let's talk", href: "#contact" },
+    cvCta: { label: "View CV", href: "/cv.pdf" },
   },
   skills: [
     {
@@ -87,11 +92,49 @@ export const portfolioContent: PortfolioContent = {
   },
   projects: [
     {
-      tag: "Fintech",
-      headline: "Financial tools built for African entrepreneurs.",
-      desc: "A scalable platform helping small business owners manage operations and track finances — turning messy spreadsheets into clean, actionable dashboards.",
-      stack: ["Node.js", "PostgreSQL", "React"],
+      tag: "Artisan Service Marketplace",
+      headline: "Bundo Artisan Service Marketplace app.",
+      desc: "Built responsive UI components and features with seamless frontend-backend integration, contributing to full-stack development including authentication flows, architecture decisions, and feature delivery",
+      stack: ["React", "TypeScript", "Tailwind"],
       type: "Client",
+      imageSrc: "/project-placeholder.svg",
+      imageAlt: "Placeholder preview for Bundo Tech service marketplace project",
+    },
+    {
+      tag: "EdTech",
+      headline: "Solvaafrica learning app frontend implementation.",
+      desc: "Built and refined responsive app screens from UI mockups, delivered new features in Expo, and maintained cross-platform consistency between Android and web experiences.",
+      stack: ["Expo", "React Native", "TypeScript"],
+      type: "Client",
+      imageSrc: SolvaImage,
+      imageAlt: "Screenshot preview of Solvaafrica learning app project",
+    },
+    {
+      tag: "Hospital Website",
+      headline: "Aigbogun Hospital web platform and StylistMi collaboration.",
+      desc: "Developed a responsive website for Aigbogun Hospital with dedicated About, Services, and Contact pages, plus an appointment-booking form. The platform improved patient engagement and streamlined appointment scheduling for both staff and patients.",
+      stack: ["React", "Tailwind CSS", "JavaScript"],
+      type: "Client",
+      imageSrc: AigbogunImage,
+      imageAlt: "Screenshot preview of Aigbogun Hospital web platform",
+    },
+    {
+      tag: "SaaS Platform",
+      headline: "FCM Integration for Dryklin app.",
+      desc: "Integrated Firebase Cloud Messaging for real-time push notifications and improved backend business logic and reliability to create a smoother order flow experience.",
+      stack: ["Java", "Spring Boot", "Firebase Cloud Messaging"],
+      type: "Client",
+      imageSrc: DryklinImage,
+      imageAlt: "Screenshot preview of Dryklin laundry management platform",
+    },
+    {
+      tag: "SAAS Platform",
+      headline: "Waste Flip API development",
+      desc: "Contributed backend logic for scheduling, billing, authentication and access control, and built scalable APIs with Node.js and Express.js to support core waste management workflows.",
+      stack: ["Node.js", "Express.js", "REST APIs",],
+      type: "Client",
+      imageSrc: WasteFlipImage,
+      imageAlt: "Screenshot preview of Waste Flip platform",
     },
     {
       tag: "Portfolio",
@@ -99,6 +142,7 @@ export const portfolioContent: PortfolioContent = {
       desc: "A personal portfolio built to practice what I preach — clean architecture, fast load times, and a design system that actually scales.",
       stack: ["Next.js", "TypeScript", "Tailwind"],
       type: "Personal",
+      href: "https://my-portfolio-xi-dusky.vercel.app/",
     },
   ],
   projectsIntro: {

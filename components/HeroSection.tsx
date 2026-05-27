@@ -46,11 +46,20 @@ export function HeroSection({ hero }: HeroSectionProps) {
           >
             {hero.primaryCta.label}
           </a>
-          <a
+         {/* <a
             href={hero.secondaryCta.href}
             className="rounded-[10px] border border-[rgba(255,255,255,0.15)] px-6 py-3 text-[15px] font-semibold text-[var(--foreground)] transition-[transform,border-color] hover:-translate-y-0.5 hover:border-[rgba(255,255,255,0.35)] sm:px-7 sm:py-3.5"
           >
             {hero.secondaryCta.label}
+          </a>
+          */}
+          <a
+            href={hero.cvCta.href}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-[10px] border border-[rgba(124,92,252,0.55)] px-6 py-3 text-[15px] font-semibold text-[var(--accent)] transition-[transform,background-color] hover:-translate-y-0.5 hover:bg-[rgba(124,92,252,0.12)] sm:px-7 sm:py-3.5"
+          >
+            {hero.cvCta.label}
           </a>
         </div>
       </div>
