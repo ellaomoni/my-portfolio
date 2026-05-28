@@ -3,18 +3,24 @@ import AigbogunImage from "@/assets/Images/Aigbogun.png";
 import DryklinImage from "@/assets/Images/Artisian Active bookings.png";
 import SolvaImage from "@/assets/Images/Solva.png";
 import WasteFlipImage from "@/assets/Images/WasteFlip.png";
+import URLShortenerImage from "@/assets/Images/USApp.png";
+import PortfolioImage from "@/assets/Images/Portfolio.png";
 
 export const portfolioContent: PortfolioContent = {
   siteConfig: {
     name: "Emmanuella Omoni",
-    title: "Backend Engineer",
+    title: "Full Stack Engineer",
     description:
       "Backend engineer building scalable systems for fintech and entrepreneurship across Africa.",
     navItems: [
       { label: "Projects", href: "#projects" },
       { label: "Skills", href: "#skills" },
       { label: "About", href: "#about" },
-      { label: "Contact", href: "#contact" },
+      {
+        label: "Resume",
+        href: "/Emmanuella-Omoni.pdf",
+        external: true,
+      },
     ],
     cta: { label: "Work with me →", href: "#contact" },
     socialLinks: [
@@ -28,12 +34,9 @@ export const portfolioContent: PortfolioContent = {
   },
   hero: {
     availabilityBadge: "AVAILABLE TO WORK",
-    headline: ["I build the systems", "that keep businesses", "running."],
+    headline: ["I build systems", "that keep businesses", "running."],
     headlineAccentIndex: 1,
-    bio: "Backend engineer. 2+ years turning complex business problems into clean, scalable software — with a focus on fintech and entrepreneurship across Africa.",
-    primaryCta: { label: "See my work", href: "#projects" },
-    secondaryCta: { label: "Let's talk", href: "#contact" },
-    cvCta: { label: "View CV", href: "https://docs.google.com/document/d/1XcksqJV9JMAebF2AVMk6kRVhKT22Dvx0iDEzoapqUCs/edit?usp=sharing" },
+    bio: "Software engineer turning business problems into clean, scalable software — from backend systems to interfaces people actually enjoy using.",
   },
   skills: [
     {
@@ -137,12 +140,24 @@ export const portfolioContent: PortfolioContent = {
       imageAlt: "Screenshot preview of Waste Flip platform",
     },
     {
+      tag: "URL Shortener",
+      headline: "Custom URL shortener with alias support and fast redirects.",
+      desc: "Built a full-stack URL shortener that converts long links into clean short URLs with custom aliases. Implemented the backend API and frontend interface to deliver reliable redirects and a smooth user experience.",
+      stack: ["Node.js", "Express", "React", "TypeScript"],
+      type: "Personal",
+      href: "https://trim-url-six.vercel.app/",
+      imageSrc: URLShortenerImage,
+      imageAlt: "Placeholder preview for URL shortener project",
+    },
+    {
       tag: "Portfolio",
       headline: "This site. Designed with intent, not just aesthetics.",
       desc: "A personal portfolio built to practice what I preach — clean architecture, fast load times, and a design system that actually scales.",
       stack: ["Next.js", "TypeScript", "Tailwind"],
       type: "Personal",
       href: "https://my-portfolio-xi-dusky.vercel.app/",
+      imageSrc: PortfolioImage,
+      imageAlt: "Screenshot preview of Portfolio project",
     },
   ],
   projectsIntro: {
@@ -170,7 +185,7 @@ export const portfolioContent: PortfolioContent = {
       titleLineBreak: true,
     },
     body: "Whether it's a project, a partnership, or a conversation — I'm here for it. Drop me a message and let's figure out what we can create together.",
-    email: "hello@emmanuella.dev",
+    email: "ellaomoni@gmail.com",
     ctaLabel: "Send me a message →",
     socialLinks: [
       { label: "GitHub", href: "https://github.com/ellaomoni", external: true },

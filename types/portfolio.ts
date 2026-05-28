@@ -8,7 +8,8 @@ export type LinkItem = {
 
 export type NavItem = {
   label: string;
-  href: `#${string}`;
+  href: string;
+  external?: boolean;
 };
 
 export type SkillItem = {
@@ -34,9 +35,6 @@ export type HeroContent = {
   headline: string[];
   headlineAccentIndex: number;
   bio: string;
-  primaryCta: LinkItem;
-  secondaryCta: LinkItem;
-  cvCta: LinkItem;
 };
 
 export type SectionIntro = {

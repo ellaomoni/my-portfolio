@@ -52,6 +52,8 @@ export function Navbar({ name, navItems, cta }: NavbarProps) {
             <a
               key={item.href}
               href={item.href}
+              target={item.external ? "_blank" : undefined}
+              rel={item.external ? "noreferrer noopener" : undefined}
               className="whitespace-nowrap text-[13px] tracking-[0.02em] text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
             >
               {item.label}
@@ -107,6 +109,8 @@ export function Navbar({ name, navItems, cta }: NavbarProps) {
               <a
                 key={item.href}
                 href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noreferrer noopener" : undefined}
                 onClick={closeMenu}
                 tabIndex={menuOpen ? 0 : -1}
                 className="rounded-lg px-3 py-3 text-[15px] font-medium text-[var(--muted)] transition-colors hover:bg-[rgba(124,92,252,0.08)] hover:text-[var(--foreground)]"
