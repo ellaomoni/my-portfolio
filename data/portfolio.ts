@@ -5,13 +5,14 @@ import SolvaImage from "@/assets/Images/Solva.png";
 import WasteFlipImage from "@/assets/Images/WasteFlip.png";
 import URLShortenerImage from "@/assets/Images/USApp.png";
 import PortfolioImage from "@/assets/Images/Portfolio.png";
+import BlogAPIImage from "@/assets/Images/BlogAPI.png";
 
 export const portfolioContent: PortfolioContent = {
   siteConfig: {
     name: "Emmanuella Omoni",
     title: "Full Stack Engineer",
     description:
-      "Backend engineer building scalable systems for fintech and entrepreneurship across Africa.",
+      "Software engineer building scalable systems for fintech and entrepreneurship across Africa.",
     navItems: [
       { label: "Projects", href: "#projects" },
       { label: "Skills", href: "#skills" },
@@ -36,7 +37,7 @@ export const portfolioContent: PortfolioContent = {
     availabilityBadge: "AVAILABLE TO WORK",
     headline: ["I build systems", "that keep businesses", "running."],
     headlineAccentIndex: 1,
-    bio: "Software engineer turning business problems into clean, scalable software — from backend systems to interfaces people actually enjoy using.",
+    bio: "Turning business problems into clean, scalable software, from backend systems to interfaces people actually enjoy using.",
   },
   skills: [
     {
@@ -90,8 +91,8 @@ export const portfolioContent: PortfolioContent = {
   ],
   skillsIntro: {
     eyebrow: "SKILLS",
-    title: "My weapon of choice.",
-    subtitle: "Tools I reach for when I need to build something that works and lasts.",
+    title: "My tools of choice.",
+    subtitle: "Tools I use to build scalable systems.",
   },
   projects: [
     {
@@ -142,7 +143,7 @@ export const portfolioContent: PortfolioContent = {
     {
       tag: "URL Shortener",
       headline: "Custom URL shortener with alias support and fast redirects.",
-      desc: "Built a full-stack URL shortener that converts long links into clean short URLs with custom aliases. Implemented the backend API and frontend interface to deliver reliable redirects and a smooth user experience.",
+      desc: "A practical project to practice my skills in building a full-stack URL shortener that converts long links into clean short URLs with custom aliases. Implemented the backend API and frontend interface to deliver reliable redirects and a smooth user experience.",
       stack: ["Node.js", "Express", "React", "TypeScript"],
       type: "Personal",
       href: "https://trim-url-six.vercel.app/",
@@ -159,21 +160,31 @@ export const portfolioContent: PortfolioContent = {
       imageSrc: PortfolioImage,
       imageAlt: "Screenshot preview of Portfolio project",
     },
+    {
+      tag: "Blog API",
+      headline: "RESTful Blog API with authentication and content management.",
+      desc: "A backend REST API for a blogging platform built with Node.js and Express, featuring user authentication, full CRUD for posts, and a clean MVC structure (controllers, models, routes, and middleware) with data persisted in MongoDB.",
+      stack: ["Node.js", "Express", "MongoDB"],
+      type: "Personal",
+      href: "https://github.com/ellaomoni/Blog-API-",
+      imageSrc: BlogAPIImage,
+      imageAlt: "Placeholder preview for Blog API project",
+    },
   ],
   projectsIntro: {
     eyebrow: "PROJECTS",
-    title: "Things I've shipped that actually work.",
+    title: "My latest projects",
     titleLineBreak: true,
   },
   about: {
     intro: {
-      eyebrow: "ABOUT",
-      title: "I turn complexity into tools people actually use.",
+      eyebrow: "ABOUT ME",
+      title: "Code, Design and everything in between",
     },
     paragraphs: [
-      "Software engineer and entrepreneur building technology that helps businesses grow and manage their finances better.",
-      "I specialize in scalable backend systems for fintech and business operations — turning messy, complex problems into practical tools for entrepreneurs across Africa.",
-      "Beyond writing code, I'm building at the intersection of technology and financial empowerment — and using my journey to inspire more women into tech.",
+      "Hi, I'm Emmanuella — a software engineer and entrepreneur passionate about building technology that keeps businesses running smoothly.",
+      "With 2+ years of experience, I specialize in building scalable software solutions for businesses, turning ideas into products for startups and businesses across Africa.",
+      "Beyond the code, I'm building products at the intersection of technology and financial tech and sharing my journey to inspire more women into tech.",
     ],
     imageSrc: "/portrait.png",
     imageAlt: "Portrait of Emmanuella Omoni",
@@ -181,7 +192,7 @@ export const portfolioContent: PortfolioContent = {
   contact: {
     intro: {
       eyebrow: "CONTACT",
-      title: "Let's build something that matters.",
+      title: "Let's build something together.",
       titleLineBreak: true,
     },
     body: "Whether it's a project, a partnership, or a conversation — I'm here for it. Drop me a message and let's figure out what we can create together.",

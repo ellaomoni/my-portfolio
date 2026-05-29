@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { Navbar } from "@/components/Navbar";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { SkillsSection } from "@/components/SkillsSection";
+import { InteractiveBackground } from "@/components/reactbits/InteractiveBackground";
 import { portfolioContent } from "@/data/portfolio";
 
 export default function Home() {
@@ -12,7 +13,8 @@ export default function Home() {
     portfolioContent;
 
   return (
-    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+    <div className="min-h-screen text-[var(--foreground)]">
+      <InteractiveBackground />
       <Navbar name={siteConfig.name} navItems={siteConfig.navItems} cta={siteConfig.cta} />
       <HeroSection hero={hero} />
       <ProjectsSection intro={projectsIntro} projects={projects} />

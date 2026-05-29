@@ -1,6 +1,9 @@
+"use client";
+
 import type { ContactContent } from "@/types/portfolio";
 import { PortfolioIcon } from "@/components/PortfolioIcon";
 import { SectionHeading } from "@/components/SectionHeading";
+import { Reveal } from "@/components/reactbits/Reveal";
 
 const socialIcons: Record<string, string> = {
   GitHub: "mdi:github",
@@ -17,16 +20,21 @@ export function ContactSection({ contact }: ContactSectionProps) {
   return (
     <section id="contact" className="px-[5%] py-[100px] pb-[120px]">
       <div className="mx-auto max-w-[640px] text-center">
-        <SectionHeading intro={contact.intro} titleClassName="!text-[clamp(32px,5vw,56px)] !leading-[1.1]" />
+        <Reveal>
+          <SectionHeading
+            intro={contact.intro}
+            titleClassName="!text-[clamp(32px,5vw,56px)] !leading-[1.1]"
+          />
 
-        <p className="mb-12 text-[17px] leading-[1.7] text-[var(--muted)]">{contact.body}</p>
+          <p className="mb-12 text-[17px] leading-[1.7] text-[var(--muted)]">{contact.body}</p>
 
-        <a
-          href={`mailto:${contact.email}`}
-          className="mb-12 inline-flex items-center gap-2.5 rounded-xl bg-[var(--accent)] px-9 py-4 text-base font-bold text-white transition-[transform,opacity] hover:-translate-y-0.5 hover:opacity-90"
-        >
-          {contact.ctaLabel}
-        </a>
+          <a
+            href={`mailto:${contact.email}`}
+            className="mb-12 inline-flex items-center gap-2.5 rounded-xl bg-[var(--accent)] px-9 py-4 text-base font-bold text-white transition-[transform,opacity] hover:-translate-y-0.5 hover:opacity-90"
+          >
+            {contact.ctaLabel}
+          </a>
+        </Reveal>
 
         <div className="flex justify-center gap-6 pt-10">
           {contact.socialLinks.map((link) => (
