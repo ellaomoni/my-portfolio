@@ -91,7 +91,7 @@ export const portfolioContent: PortfolioContent = {
   ],
   skillsIntro: {
     eyebrow: "SKILLS",
-    title: "My tools of choice.",
+    title: "My tools of choice",
     subtitle: "Tools I use to build scalable systems.",
   },
   projects: [
@@ -192,7 +192,7 @@ export const portfolioContent: PortfolioContent = {
   contact: {
     intro: {
       eyebrow: "CONTACT",
-      title: "Let's build something together.",
+      title: "Let's build something together",
       titleLineBreak: true,
     },
     body: "Whether it's a project, a partnership, or a conversation — I'm here for it. Drop me a message and let's figure out what we can create together.",

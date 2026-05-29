@@ -6,7 +6,10 @@ type SectionHeadingProps = {
 };
 
 export function SectionHeading({ intro, titleClassName = "" }: SectionHeadingProps) {
-  const titleParts = intro.titleLineBreak ? intro.title.split(" that ") : null;
+  const titleParts =
+    intro.titleLineBreak && intro.title.includes(" that ")
+      ? intro.title.split(" that ")
+      : null;
 
   return (
     <div>
@@ -20,7 +23,7 @@ export function SectionHeading({ intro, titleClassName = "" }: SectionHeadingPro
           <>
             {titleParts[0]}
             <br />
-            that {titleParts[1]}
+            that {titleParts.slice(1).join(" that ")}
           </>
         ) : (
           intro.title
